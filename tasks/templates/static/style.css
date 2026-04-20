@@ -1,0 +1,64 @@
+
+        :root {
+            --primary: #6366f1;
+            --success: #22c55e;
+            --danger: #f43f5e;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            --glass: rgba(255, 255, 255, 0.95);
+        }
+
+        body {
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            padding-bottom: 100px;
+        }
+
+        .main-container { max-width: 550px; margin: auto; padding: 15px; }
+
+        /* البحث والفلترة */
+        .search-box {
+            background: white; border-radius: 50px; padding: 5px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee;
+        }
+
+        .filter-btn {
+            border-radius: 20px; font-size: 0.85rem; transition: 0.3s;
+            border: none; background: white; color: #64748b; padding: 8px 18px;
+        }
+
+        .filter-btn.active { background: var(--primary); color: white; }
+
+        .report-card {
+            background: var(--glass); backdrop-filter: blur(15px);
+            border-radius: 25px; border: 1px solid rgba(255,255,255,0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05); margin-bottom: 20px;
+        }
+
+        .task-item {
+            background: white; border-radius: 20px; margin-bottom: 12px;
+            padding: 15px; display: flex; align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .timer-badge {
+            font-family: 'Courier New', monospace; font-size: 0.85rem;
+            background: #f1f5f9; color: var(--primary); padding: 4px 10px; border-radius: 10px;
+        }
+
+        .check-btn {
+            width: 32px; height: 32px; border: 2px solid #e2e8f0;
+            border-radius: 50%; margin-left: 12px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .check-btn.completed { background: var(--success); border-color: var(--success); color: white; }
+        .completed-text { text-decoration: line-through; color: #94a3b8 !important; }
+
+        .fab-add {
+            position: fixed; bottom: 30px; left: 30px;
+            width: 60px; height: 60px; border-radius: 20px;
+            background: var(--primary); color: white;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 25px rgba(99,102,241,0.4); border: none; z-index: 1000;
+        }
